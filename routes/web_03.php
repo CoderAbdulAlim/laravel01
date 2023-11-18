@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', [\App\Http\Controllers\HomeController::class, 'index']);
-// for single method choose invokable controller
-Route::get('/', \App\Http\Controllers\HomeController::class);
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', [\App\Http\Controllers\HomeController::class, 'homePage']);
+
+// Route::get('/home', [\app\Http\Controllers\HomeController::class, 'homePage']);

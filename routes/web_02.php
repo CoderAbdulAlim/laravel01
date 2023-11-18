@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +13,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', [\App\Http\Controllers\HomeController::class, 'index']);
-// for single method choose invokable controller
-Route::get('/', \App\Http\Controllers\HomeController::class);
+Route::get('/', function () {
+    return view('welcome');
+});
+
+// Route::get('/posts', function () {
+    // return view('Posts');
+// });
+
+// Route::get('/posts', function () {
+//     return 'posts';
+// });
+
+// Route::get('/posts/{id}', function ($id) {
+//     return $id;
+// });
+
+Route::get('/posts/{id}/comments/{comment}', function ($id, $comment) {
+    return $id . ' > ' . $comment;
+});
