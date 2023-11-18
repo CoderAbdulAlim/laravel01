@@ -6,6 +6,6 @@
     <title>Welcome</title>
 </head>
 <body>
-    <h1>Home Page : Welcome</h1>
+    <h1>Dashboard Page : Welcome</h1>
 </body>
 </html>
