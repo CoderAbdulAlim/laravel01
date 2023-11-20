@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\Product;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -21,5 +23,9 @@ class DatabaseSeeder extends Seeder
         
        
         \App\Models\Post::factory(count:100)->create();
+        // Post::factory()->count(100)->create(); এরর আসে
+
+        // Product::factory(count:100); কাজ করে নাই
+        Product::factory()->count(100)->create();
     }
 }
